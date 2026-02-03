@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8">
+  <title>Valentine 💌</title>
+
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: linear-gradient(135deg, #ffe6ee, #fff);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: "Segoe UI", Arial, sans-serif;
+    }
+
+    .card {
+      background: white;
+      padding: 40px;
+      border-radius: 24px;
+      text-align: center;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+      position: relative;
+      width: 340px;
+    }
+
+    h1 {
+      margin-bottom: 10px;
+    }
+
+    .cute {
+      font-size: 80px;
+      margin: 20px 0;
+    }
+
+    button {
+      padding: 14px 28px;
+      font-size: 18px;
+      border: none;
+      border-radius: 14px;
+      cursor: pointer;
+      position: relative;
+    }
+
+    #yes {
+      background: #3cb371;
+      color: white;
+      margin-right: 10px;
+    }
+
+    #no {
+      background: #e63946;
+      color: white;
+      position: absolute;
+    }
+
+    #message {
+      margin-top: 20px;
+      font-size: 18px;
+      color: #333;
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="card">
+    <h1>Till min björn som inte frågat mig om 'alla ❤️s dag´, så jag får fråga dig istället Mohamed 💌</h1>
+    <p>Vill du vara min Valentine?</p>
+
+    <div class="cute">🐻❤️</div>
+
+    <button id="yes">JA 💚</button>
+    <button id="no">NEJ ❤️‍🩹</button>
+
+    <div id="message">
+      💖AHLAN WA SAHLAN! Bäst för dig :3, men ärligt längtar att få träffa dig nästa vecka💖
+    </div>
+  </div>
+
+  <script>
+    const noButton = document.getElementById("no");
+    const yesButton = document.getElementById("yes");
+    const message = document.getElementById("message");
+
+    noButton.addEventListener("mouseover", () => {
+      const x = Math.random() * 250 - 125;
+      const y = Math.random() * 150 - 75;
+      noButton.style.transform = `translate(${x}px, ${y}px)`;
+    });
+
+    yesButton.addEventListener("click", () => {
+      message.style.display = "block";
+    });
+  </script>
+</body>
+</html>
